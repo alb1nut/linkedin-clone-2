@@ -13,6 +13,11 @@ const Main = () => {
           moving.
         </p>
       </Section>
+      <LayOut>
+        <div>Left Side</div>
+        <div>Feed</div>
+        <div>Right Side</div>
+      </LayOut>
     </Container>
   );
 };
@@ -36,19 +41,39 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
 
-  h5{
+  h5 {
     color: #0a66c2;
     font-size: 14px;
 
-    a{
-        font-weight: 700;
+    a {
+      font-weight: 700;
     }
   }
 
-  p{
+  p {
     font-size: 14px;
     color: #434649;
     font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0 5px;
+  }
+`;
+
+const LayOut = styled.div`
+  display: grid;
+  grid-template-areas: "leftSide feed rightside";
+  grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+  column-gap: 25px;
+  row-gap: 25px;
+  grid-template-rows: auto;
+  margin: 25px 0;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 export default Main;
