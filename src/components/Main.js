@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import Feed from "./Feed";
+import LeftSide from "./LeftSide";
+import RightSide from "./RightSide";
 
 const Main = () => {
   return (
     <Container>
       <Section>
         <h5>
-          <a>Hiring in a hurry? -</a>
+          <a href="">Hiring in a hurry? -</a>
         </h5>
         <p>
           Find talented pros in record time with Upwork and keep business
@@ -14,9 +17,9 @@ const Main = () => {
         </p>
       </Section>
       <LayOut>
-        <div>Left Side</div>
-        <div>Feed</div>
-        <div>Right Side</div>
+        <LeftSide />
+        <Feed />
+        <RightSide />
       </LayOut>
     </Container>
   );
@@ -26,11 +29,11 @@ const Container = styled.div`
   padding-top: 52px;
   max-width: 100%;
 `;
-const Content = styled.div`
-  max-width: 1128px;
-  margin-left: auto;
-  margin-right: auto;
-`;
+// const Content = styled.div`
+//   max-width: 1128px;
+//   margin-left: auto;
+//   margin-right: auto;
+// `;
 
 const Section = styled.section`
   min-height: 50px;
@@ -64,7 +67,7 @@ const Section = styled.section`
 
 const LayOut = styled.div`
   display: grid;
-  grid-template-areas: "leftSide feed rightside";
+  grid-template-areas: "leftSide feed rightSide";
   grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
   column-gap: 25px;
   row-gap: 25px;
