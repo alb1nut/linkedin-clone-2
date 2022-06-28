@@ -47,6 +47,12 @@ const Feed = () => {
               <img src="/images/ellipsis.svg" alt="" />
             </button>
           </SharedActor>
+          <Description>Description</Description>
+          <SharedImg>
+            <a href="">
+              <img src="/images/shared-image.jpg" alt="sharedImg" />
+            </a>
+          </SharedImg>
         </Article>
       </div>
     </Container>
@@ -178,13 +184,34 @@ const SharedActor = styled.div`
     }
   }
 
-  button{
+  button {
     position: absolute;
     right: 12px;
-    top:0;
+    top: 0;
     background: transparent;
-    border:none;
+    border: none;
     outline: none;
+  }
+`;
+
+const Description = styled.div`
+  padding: 0 16px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  text-align: left;
+`;
+const SharedImg = styled.div`
+  margin-top: 8px;
+  width: 100%;
+  display: block;
+  position: relative;
+  background-color: #f9fafb;
+
+  img{
+    object-fit: contain;
+    width:100%;
+    height: 100%;
   }
 `;
 
