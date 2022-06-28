@@ -170,9 +170,21 @@ const SharedActor = styled.div`
           color: rgb(0, 0, 0, 1);
         }
 
-        &:
+        &:nth-child(n + 1) {
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.6);
+        }
       }
     }
+  }
+
+  button{
+    position: absolute;
+    right: 12px;
+    top:0;
+    background: transparent;
+    border:none;
+    outline: none;
   }
 `;
 
