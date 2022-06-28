@@ -197,7 +197,7 @@ const CommunityCard = styled(ArtCart)`
     &:last-child{
         color:rgba(0,0,0,0.);
         text-decoration: none;
-        border-top:1px solid #d6cec2;.
+        border-top:1px solid #d6cec2;
         padding: 12px;
         &:hover{
             background-color: rgba(0,0,0,0.08);
