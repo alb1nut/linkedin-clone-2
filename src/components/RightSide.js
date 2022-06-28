@@ -31,7 +31,16 @@ const RightSide = () => {
             </div>
           </li>
         </FeedList>
+
+        <Recommendation>
+          View all recommendations
+          <img src="/images/right-icon.svg" alt="" />
+        </Recommendation>
       </FollowCard>
+
+      <BannerCard>
+        <img src="" alt="" />
+      </BannerCard>
     </Container>
   );
 };
@@ -103,4 +112,17 @@ const Avatar = styled.ul`
   margin-right: 8px;
 `;
 
+const Recommendation = styled.a`
+  color: #0a66c2;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+`;
+
+const BannerCard = styled(FollowCard)`
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
 export default RightSide;
