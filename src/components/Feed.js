@@ -53,6 +53,19 @@ const Feed = () => {
               <img src="/images/shared-image.jpg" alt="sharedImg" />
             </a>
           </SharedImg>
+          <SocialCounts>
+            <li>
+              <button>
+                <img src="" alt="likes" />
+                {/* likes and clapping */}
+                <img src="" alt="claps" />
+                <span>75</span>
+              </button>
+            </li>
+            <li>
+              <a href="">2 Comments</a>
+            </li>
+          </SocialCounts>
         </Article>
       </div>
     </Container>
@@ -208,11 +221,30 @@ const SharedImg = styled.div`
   position: relative;
   background-color: #f9fafb;
 
-  img{
+  img {
     object-fit: contain;
-    width:100%;
+    width: 100%;
     height: 100%;
   }
 `;
 
+const SocialCounts = styled.ul`
+    line-height: 1.3;
+    display: flex;
+    align-items: flex-start;
+    overflow: auto;
+    margin: 0 16px;
+    padding: 8px 0;
+    border-bottom: 1px solid #e9e5df;
+    list-style: none;
+
+    li{
+        margin-right: 5px;
+        font-size: 12px;
+
+        button{
+            display:flex;
+        }
+    }
+`;
 export default Feed;
