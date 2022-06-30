@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { connect } from "react-redux";
 
 const Login = (props) => {
   return (
@@ -29,11 +30,10 @@ const Login = (props) => {
   );
 };
 
-export default Login;
 
 const Container = styled.div`
   padding: 0px;
-`;
+  `;
 const Nav = styled.nav`
   max-width: 1128px;
   margin: auto;
@@ -84,7 +84,7 @@ const SignIn = styled.a`
     color: #0a66c2;
     text-decoration: none;
   }
-`;
+  `;
 
 const Section = styled.section`
   display: flex;
@@ -125,8 +125,9 @@ const Hero = styled.div`
 
   img {
     /* z-index: -1; */
-    width: 700px;
-    height: 670px;
+    top: -10px;
+    width: 600px;
+    height: 600px;
     position: absolute;
     bottom: -2px;
     right: -150px;
@@ -145,7 +146,7 @@ const Form = styled.div`
   @media (max-width: 768px) {
     margin-top: 20px;
   }
-`;
+  `;
 const Google = styled.button`
   display: flex;
   justify-content: center;
@@ -165,7 +166,19 @@ const Google = styled.button`
   &:hover{
     background-color: rgba(207,207,207,0.25);
     color: rgba(0,0,0,0.75);
-
+    
   }
-
+  
 `;
+
+const mapStateToProps= (state)=> {
+   return {};
+};
+
+const mapDispatchtoProps = (dispatch) =>({
+
+});
+
+export default  connect(mapDispatchtoProps,mapStateToProps)(Login);
+
+  // export default Login;
